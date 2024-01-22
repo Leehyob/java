@@ -1,0 +1,13 @@
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		System.out.println("Welcome BookMaket!");
+		System.out.println("Welcome ShoppingMall");
+		
+		String greeting = "Welcome to shoppingMall";
+		String tagline = "Welcome to Book Market!";
+	
+	}
+
+}

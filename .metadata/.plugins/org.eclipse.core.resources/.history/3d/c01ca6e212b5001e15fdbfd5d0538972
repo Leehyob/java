@@ -1,0 +1,13 @@
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		String myName = "김정훈";
+	    int myAge = 20;
+	    int myNumber = 15;
+        System.out.print("이름 = \t" + myName + "\n");			
+        System.out.print("나이 = \t" + myAge + "\n");
+        System.out.print("번호 = \t" + myNumber + "\n");
+	}
+
+}

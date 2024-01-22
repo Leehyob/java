@@ -1,0 +1,16 @@
+package ex02;
+
+public class Exam02 {
+
+	public static void main(String[] args) {
+		//1~100 사이에 3의 배수이면서 5의 배수 합 구하고, 갯수 구하기
+		
+		int i;
+		
+		for (i=1; i<=10; i++) {
+			System.out.println(i + " ");
+		}
+
+	}
+
+}
