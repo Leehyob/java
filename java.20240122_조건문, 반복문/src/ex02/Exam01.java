@@ -29,7 +29,7 @@ public class Exam01 {
 		System.out.println("짝수 합 : " + even);
 		System.out.println("홀수 합 : " + odd);
 		
-		int num = ()
+	
 		
 
 	}

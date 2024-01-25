@@ -49,14 +49,14 @@ public class Practice01 {
 		
 		if (max>n2) {
 			if(n3>max) {
-				n3=max
+				n3=max;
 			}
 		}else {
 			if (n2>n3) {
 				max=n2;
 		}
 			else {
-				max=n3
+				max=n3;
 			}
 					
 				}
