@@ -9,7 +9,7 @@ public class CarTest02 {
 		
 		
 		while(car.startEngine()){
-			car.setAll();
+			
 			car.displayCarDetails();
 			car.question();
 			
