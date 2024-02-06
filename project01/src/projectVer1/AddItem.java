@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class AddItem {
 	static final int NUM_BOOK = 3;
 	static final int NUM_ITEM = 7;
-	
+	static CartItem[] mCartItem = new CartItem[NUM_BOOK];
+	static int mCartCount = 0;
 	public static void menuCartAddItem(String[][] book) {
 		Scanner scBook = new Scanner(System.in);
 		bookList(book);
@@ -30,8 +31,13 @@ public class AddItem {
 					if(flag) {
 						System.out.println("장바구니에 추가하시겠습니까? Y|N : ");
 						str = scBook.nextLine();
-						if(str.toUpperCase().equals(book[i][0]))
+						if(str.toUpperCase().equals("Y")) {
 							System.out.println(book[i][0] + "도서가 장바구니에 추가되었습니다.");
+							if(!isCartInBook(book[numId][0])){
+									mCartItem[mCartCount++] = new CartItem(book[numId]);
+							}
+								
+						}
 						quit = true;
 						break;
 					}else
@@ -63,6 +69,29 @@ public class AddItem {
 		book[2][4] = "컴퓨팅 사고력을 키우는 블록 코딩";
 		book[2][5] = "컴퓨터 입문";
 		book[2][6] = "2019/06/10";
+	}
+	public static boolean isCartInBook(String booId) {
+		CartItem add = new CartItem();
+		boolean flag = false;
+		for(int i=0; i<mCartCount; i++) {
+			if( add.bookID== mCartItem[i].getBookID()) {
+				mCartItem[i].setQuantity(mCartItem[i].getQuantity()+1);
+				flag = true;
+			}
+		}
+		return flag;
+	}
+	public static void menuCartItemInfo() {
+		System.out.println("2. 장바구니 상품 목록 : ");	
+		System.out.println("-------------------------------------------------");	
+		System.out.println("도서ID \t |수량\t |합계 ");	
+		for(int i=0; i<mCartCount; i++) {
+			System.out.print("  " + mCartItem[i].getBookID() + "\t");
+			System.out.print("  " + mCartItem[i].getQuantity() + "\t");
+			System.out.print("  " + mCartItem[i].getTotalPrice() + "\t");
+			System.out.println("  ");
+		}
+		System.out.println("-------------------------------------------------");
 	}
 }
 			

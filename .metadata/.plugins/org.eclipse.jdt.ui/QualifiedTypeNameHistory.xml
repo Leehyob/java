@@ -24,7 +24,13 @@
     <fullyQualifiedTypeName name="C"/>
     <fullyQualifiedTypeName name="ex01.RemoteControl"/>
     <fullyQualifiedTypeName name="interfacetPractice.Sum"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="projectVer1.CartItem"/>
+    <fullyQualifiedTypeName name="java02.Main"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="java02.Buyer"/>
+    <fullyQualifiedTypeName name="java02.Computer"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="ex01.Buyer"/>
 </qualifiedTypeNameHistroy>

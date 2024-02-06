@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Project80p {
 	static final int NUM_BOOK = 3;
 	static final int NUM_ITEM = 7;
+	static User mUser;
 	
 	public static void main(String[] args) {
 		
@@ -17,82 +18,67 @@ public class Project80p {
 		System.out.print("당신의 이름을 입력하세요 : " );
 		String name = sc.nextLine();
 		System.out.print("연락처를 입력하세요 : " );
-		int phone = sc.nextInt();
+		String phone = sc.nextLine();
+		mUser = new User(name, phone);
 		
 		while(!quit) {
 			System.out.println("**************************************************");
 			System.out.println("\t" + greeting);
 			System.out.println("\t" + tagline);
-			menuIntroduction();
+			Welcome.menuIntroduction();
 			int menu = sc.nextInt();
 			
-			if(menu<1 || menu>8) {
+			if(menu<1 || menu>9) {
 				System.out.println("1부터 8 사이의 숫자를 입력하세요.");
 			}else {
 				switch(menu) {
 				case 1 : 
-					menuGuestInfo(name, phone);
+					Welcome.menuGuestInfo(name, phone);
 					break;
 				case 2 : 
-					menuCartItemInfo();
+					AddItem.menuCartItemInfo();
 					break;
 				case 3 : 
-					menuCartClear();
+					Welcome.menuCartClear();
 				case 4 :
 					AddItem.bookList(book);
 					AddItem.menuCartAddItem(book);
 					break;
 				case 5 :
-					menuRemoveItemCount();
+					Welcome.menuRemoveItemCount();
 					break;
 				case 6 : 
-					menuRemoveItem();
+					Welcome.menuRemoveItem();
 					break;
 				case 7 : 
-					 menuCartBill();
+					 Welcome.menuCartBill();
 					break;
 				case 8 :
-					 menuExit();
+					 Welcome.menuExit();
 					quit = true;
 					break;
-					
+				case 9 :
+					menuAdminLogin();
+					break;
 				}
 			}
 		}
 	}
-	public static void menuIntroduction() {
-		System.out.println("**************************************************");			
-		System.out.println("1. 고객 정보 확인하기 \t 4. 바구니에 항목 추가하기");
-		System.out.println("2. 장바구니 상품 목록 보기 \t 5. 장바구니의 항목 수량 줄이기");
-		System.out.println("3. 장바구니 비우기 \t\t 6. 장바구니의 항목 삭제하기");
-		System.out.println("7. 영수증 표시하기 \t\t 8. 종료");
-		System.out.println("**************************************************");
-		System.out.print("메뉴 번호를 선택해주세요");
-	}
-	public static void menuGuestInfo(String name, int phone) {
-		System.out.println("1. 현재 고객 정보");
-		Person person = new Person(name, phone);
-		System.out.println("이름 : " + person.getName() + "연락처 : " + person.getPhone());
+	public static void menuAdminLogin() {
+		System.out.println("관리자 정보를 입력하세요");
+		Scanner input = new Scanner(System.in);
+		System.out.println("아이디 : ");
+		String adminId = input.nextLine();
 		
-	}
-	public static void menuCartItemInfo() {
-		System.out.println("2. 장바구니 상품 목록 보기");			
-				}
-	public static void menuCartClear() {
-		System.out.println("3. 장바구니 비우기");
-	}
-	
-	public static void menuRemoveItemCount() {
-		System.out.println("5. 장바구니의 항목 수량 줄이기");
-	}
-	public static void menuRemoveItem() {
-		System.out.println("6. 장바구니의 항목 삭제하기");
-	}
-	public static void menuCartBill() {
-		System.out.println("7. 영수증 표시하기");
-		}
-	public static void menuExit() {
-		System.out.println("시스템을 종료합니다.");
+		System.out.println("비밀번호 : ");
+		String adminPW = input.nextLine() ;
+		
+		Admin admin = new Admin(mUser.getName(),mUser.getPhone());
+		if(adminId.equals(admin.getId())||adminPW.equals(admin.getPassword())){
+			System.out.println("이름" + admin.getName() + "연락처 " + admin.getPhone());
+			System.out.println("아이디" + admin.getId() + "비밀번호 " + admin.getPassword());
+		}else
+			System.out.println("관리자 정보가 일치하지 않습니다.");
 	}
 	
 }

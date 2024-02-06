@@ -2,7 +2,7 @@ package projectVer1;
 
 public class CartItem {
 	private String[] itemBook = new String[7];
-	private String bookID;
+	String bookID;
 	private int quantity;
 	private int totalPrice;
 	
@@ -27,7 +27,7 @@ public class CartItem {
 	public void setBookID(String bookID) {
 		this.bookID = bookID;
 	}
-	public int etQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 	public void setQuantity(int quantity) {
