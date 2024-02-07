@@ -24,10 +24,10 @@ public class Exam01 {
 		A aa2 = new C();
 		C cc1 = (C)aa2; //위의 B 타입 변환과 같은 경우 ㅇㅇ
 		
-//		testFunc();
+		testFunc();
 		
-//		testFunc2(new C());
-//		testFunc2(new A());
+		testFunc2(new C());
+		testFunc2(new A());
 		
 		
 		test(new A());
@@ -45,8 +45,8 @@ public class Exam01 {
 		// funcA, funcB, funcC 출력
 //		A a = new C();
 		if(a instanceof C){
-			C c =(C)a;  		//((C)a).funcC() 도 가능
-			c.funcC();
+			C c =(C)a;  		//((C)a).funcC() 도 가능 ↓
+			c.funcC();			//연산자 우선순위에서 .이 더 높기 때문에 (C)a.funcC는 a.funcC 가 먼저 실행된 후 (C)를 처리해주기 때문에 오류가 남. 때문에 ((C)a)와 같이 소괄호를 넣어줘 연산 순위를 바꿔줌
 		}else if(a instanceof B) {
 			B b = (B)a;
 			b.funcB();
