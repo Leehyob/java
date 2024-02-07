@@ -11,11 +11,11 @@ public class Exception01 {
 		System.out.println("정수 2개 입력 : ");
 		
 		
-		try {
+		try {//문제 소지가 있는 대상 기입
 			int num1 = sc.nextInt();
 			int num2 = sc.nextInt();
 		
-			div = num1/num2;
+			div = num1/num2;//0 아닌 값 요구, 0입력하게 되면?예외발생
 			
 			int[]arr = new int[3];
 			for(int i=0; i<10; i++) {
@@ -34,7 +34,6 @@ public class Exception01 {
 			//예외가 발생하든 발생하지 않든 무조건 처리하는 구문
 	}
 	
-		
 		
 		System.out.println("나누기 : " + div);
 		

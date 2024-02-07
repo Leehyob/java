@@ -23,7 +23,9 @@ class Box2{
 
 	@Override
 	public boolean equals(Object obj) {
-			return x == ((Box2)obj).x;
+		Box2 b = (Box2)obj;
+		return x==b.x;
+//			return x == ((Box2)obj).x;
 	} //equal 메소드 재정의 --> 타입 변환으로 접근 가능하게 만들어서 비교
 	
 }
