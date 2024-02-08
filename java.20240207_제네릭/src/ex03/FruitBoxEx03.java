@@ -24,7 +24,7 @@ class Box<T>{
 	}
 	
 }
-
+	
 
 
 public class FruitBoxEx03 {
@@ -33,7 +33,7 @@ public class FruitBoxEx03 {
 		
 		Box<Apple> box1= new Box();
 		Box<Orange> box2 = new Box();
-		
+		Box<Integer> box3 = new Box(); 
 		box1.setObj(new Apple());
 		box2.setObj(new Orange());
 		
@@ -42,9 +42,10 @@ public class FruitBoxEx03 {
 		
 		System.out.println(box1.getObj());
 		System.out.println(box2.getObj());
-		
-		
-		
+		box3.setObj(53);
+		System.out.println(box3.getObj());
+//		=> int num = box3.getObj();
+//		System.out.println(num);
 	}
 
 }

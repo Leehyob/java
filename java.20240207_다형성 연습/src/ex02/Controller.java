@@ -25,6 +25,7 @@ public class Controller {
 		Interface.e();
 		Interface_1 inter = new Interface_1();
 		inter.random2();
+		inter.random();
 	}
 
 }
