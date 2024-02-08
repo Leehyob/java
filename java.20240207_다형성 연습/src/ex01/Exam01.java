@@ -31,6 +31,9 @@ public class Exam01 {
 		
 		
 		test(new A());
+		aa2.funcD();
+		aa1.funcD();
+		a1.funcD();
 		
 	}
 	static void testFunc() {
@@ -75,14 +78,23 @@ class A{
 	void funcA(){
 		System.out.println("funcA");
 	}
+	void funcD() {
+		System.out.println("A-funcD");
+	}
 }
 class B extends A{
 	void funcB(){
 		System.out.println("funcB");
 	}
+	void funcD() {
+		System.out.println("B-funcD");
+	}
 }
 class C extends B{
 	void funcC(){
 		System.out.println("funcC");
+	}
+	void funcD() {
+		System.out.println("C-funcD");
 	}
 }

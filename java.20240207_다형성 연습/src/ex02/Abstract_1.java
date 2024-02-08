@@ -4,8 +4,13 @@ public class Abstract_1 extends Abstract{
 
 	@Override
 	String b() {
+		return "B";
+	}
+
+	@Override
+	int d() {
 		
-		return "Abstract_1";
+		return 5;
 	}
 
 }

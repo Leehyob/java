@@ -30,10 +30,12 @@
     <fullyQualifiedTypeName name="java02.Buyer"/>
     <fullyQualifiedTypeName name="java02.Computer"/>
     <fullyQualifiedTypeName name="ex01.Buyer"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="ex02.Abstract_1"/>
+    <fullyQualifiedTypeName name="ex02.Abstract"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

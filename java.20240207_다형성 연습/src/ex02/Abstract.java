@@ -8,7 +8,14 @@ public abstract class Abstract {
 	
 	abstract String b();
 	
-	String c() {
-		return "C";
+	void c() {
+		System.out.println(3);
+	}
+	
+	abstract int d();
+	
+	void e(String str) {
+		System.out.println(str);
 	}
 }
+	
