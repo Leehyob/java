@@ -35,7 +35,12 @@ public class BoxEx02 {
 		Box<A> abox = new Box<A>();
 		Box<B> bbox = new Box<B>();
 		Box<C> cbox = new Box<C>();
-		
+		abox.set(new A());
+		bbox.set(new B());
+		cbox.set(new C());
+		System.out.println(abox.get());
+		System.out.println(bbox.get());
+		System.out.println(cbox.get());
 //		Box<Integer> ibox = new Box();		//오류 -> A도 아니고 A의 하위클래스도 아닌 Integer는 받아주지 않음
 		
 	}

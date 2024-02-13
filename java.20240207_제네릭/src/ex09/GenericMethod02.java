@@ -25,6 +25,7 @@ public class GenericMethod02 {
 		String str = Unboxer.openBox(sBox);
 		
 		System.out.println(str);
+//		 = System.out.println(sBox.get());
 	}
 
 }

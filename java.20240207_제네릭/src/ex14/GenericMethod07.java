@@ -15,9 +15,9 @@ class Box<T>{
 	}
 }
 
-class UnBoxer<T>{					//Integer나 Integer 위의 상위 클래스 모두 참조 가능(상한제한)
+class UnBoxer<T>{					//Integer나 Integer 위의 상위 클래스 모두 참조 가능(하한제한)
 	public static void peekBox(Box<? super Integer> box) {	// ? : 와일드 카드
-		System.out.println(box);							//?랑 T의 차이점은 그래서 뭐?임?
+		System.out.println(box);							
 	}
 
 }
