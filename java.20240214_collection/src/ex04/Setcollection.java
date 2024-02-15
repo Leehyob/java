@@ -16,12 +16,17 @@ public class Setcollection {
 		set.add("Box");
 		set.add("Robot");
 		set.add("Toy");
-
+		set.add("Cat");
+		
+		System.out.println("---------------------------");
+			System.out.print(set);
+		System.out.println("\n---------------------------");
+		
 		Iterator<String> it = set.iterator();	//반복자
 		//for문 while문 가동을 가능하게 만듦
 		//출력 패턴을 일정하게 만들어줌
 		//출력을 다시 한 번 하고싶을 때는 생성을 한 번 더 해줘야 함
-		//set은 출력할 때 반드시 iterator를 사용해야 함. 다른 출력 방법이 없음
+		
 		
 		while(it.hasNext()) {
 			System.out.print(it.next() + '\t');
