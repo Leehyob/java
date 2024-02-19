@@ -46,6 +46,21 @@ public class MP3Player implements MediaPlayer {
 			System.out.println("시스템 오류입니다.");
 			
 	}
+
+
+	@Override
+	public void play() {
+	}
+
+
+	@Override
+	public void stop() {
+	}
+
+
+	@Override
+	public void pause() {
+	}
 	
 	
 

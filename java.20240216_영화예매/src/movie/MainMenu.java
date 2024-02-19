@@ -23,6 +23,8 @@ public class MainMenu extends AbstractMenu{
 	@Override
 	public Menu next() {
 		switch(sc.nextLine()) {
+		case "2" :
+			checkReservation();
 		case "4" :
 			if(! checkAdminPassword()) {
 				System.out.println(">> 비밀번호가 틀렸습니다.");
@@ -39,6 +41,16 @@ public class MainMenu extends AbstractMenu{
 		
 	}
 	
+	private void checkReservation() {
+		System.out.println("예매번호를 입력하세요 : ");
+		
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	private boolean checkAdminPassword() {
 		System.out.println("관리자 비밀번호를 입력하세요 : ");
 		

@@ -23,13 +23,42 @@ public class AdminMenu extends AbstractMenu {
 	@Override
 	public Menu next() {
 		switch(sc.nextLine()) {
+		case "1" :
+			createMovie();	//영화 등록하기
+			return this;
 		case "2" :
 			printAllMovies();	//영화 목록 출력
 			return this;		//adminMenu 반환
+		case "3" :
+			deleteMovie();
+			return this;
 		case "b" : return prevMenu;	//왜 전으로 돌아감?
 		default : return this;	//생성 객체값 반환 = null
 		}
 	}
+	private void deleteMovie() {
+		printAllMovies();
+		
+		System.out.println("삭제할 영화의 ID값을 입력하세요 : ");
+		
+			Movie.delete(sc.nextLine());
+			System.out.println(">> 삭제되었습니다.");
+		
+	}
+
+	private void createMovie() {
+		System.out.println("제목 : ");
+		String title = sc.nextLine();
+		
+		System.out.println("장르 : ");
+		String genre = sc.nextLine();
+		
+		Movie movie = new Movie(title, genre);
+		
+			movie.save();
+			System.out.println(">> 저장되었습니다.");
+		}
+
 	private void printAllMovies() {
 		ArrayList<Movie> movies =  Movie.findAll(); //findAll 의 return값인 movies를 이 메소드 안 movies에 넣음
 		

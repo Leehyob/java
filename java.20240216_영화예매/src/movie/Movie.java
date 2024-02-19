@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.time.Instant;
 import java.util.ArrayList;
 
 public class Movie {
@@ -20,7 +22,14 @@ public class Movie {
 		this.title = title;
 		this.genre = genre;
 	}
-	
+	public Movie(String title, String genre) {
+		
+		this(Instant.now().getEpochSecond(), title, genre);
+		
+		long id = Instant.now().getEpochSecond();
+		System.out.println("id : " + Instant.now().getEpochSecond());
+		
+	}
 	public static ArrayList<Movie> findAll(){
 		
 		ArrayList<Movie> movies = new ArrayList<Movie>();
@@ -53,4 +62,46 @@ public class Movie {
 		return String.format("[%d]: %s(%s)",id,title,genre);	//format : 출력 형태 잡기. 형타입에 따라 변수가 자리 찾아서 들어감
 							//정수형	문자열	(%c - 문자, %f - 실수)
 	}
+	
+	public void save() {
+		try {
+			FileWriter fw = new FileWriter(file, true);
+			
+			fw.write(this.toFileString() + "\n");
+			fw.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void delete(String movieId) {
+		BufferedReader br = null;
+		String text  = "";
+		String line  = "";
+		try {
+			br = new BufferedReader(new FileReader(file));
+			
+			while((line=br.readLine())!=null) {
+				String[] temp = line.split(",");
+				if(movieId.equals(temp[0])) {
+					continue;
+				}
+				text += line + "\n";
+			}
+			br.close();
+			
+			FileWriter fw = new FileWriter(file);
+			fw.write(text);
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private String toFileString() {
+		return String.format("%d%s%s",id, title, genre);
+	}
+
+
 }
+
+
