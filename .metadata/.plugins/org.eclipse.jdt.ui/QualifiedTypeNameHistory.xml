@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="ex03.array01"/>
-    <fullyQualifiedTypeName name="ex03.Student"/>
-    <fullyQualifiedTypeName name="ex02.Phone"/>
-    <fullyQualifiedTypeName name="ex02.SmartPhone"/>
-    <fullyQualifiedTypeName name="ex02.NewestPhone"/>
-    <fullyQualifiedTypeName name="ex02.PhoneController"/>
     <fullyQualifiedTypeName name="ex05.AudioBook"/>
     <fullyQualifiedTypeName name="ex02.RussianBlue"/>
     <fullyQualifiedTypeName name="ex02.ShortHair"/>
@@ -17,7 +9,6 @@
     <fullyQualifiedTypeName name="chap08.HybirdCar"/>
     <fullyQualifiedTypeName name="chap08.HybridWaterCar"/>
     <fullyQualifiedTypeName name="ex02.Information"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="exo3.MediaPlayer"/>
     <fullyQualifiedTypeName name="exo3.FLACPlayer"/>
     <fullyQualifiedTypeName name="exo3.FLACPlayer_t"/>
@@ -40,7 +31,6 @@
     <fullyQualifiedTypeName name="ex08.ArraylistEx01"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.ListIterator"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -60,4 +50,14 @@
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="test.Point"/>
     <fullyQualifiedTypeName name="test.Reotangle"/>
+    <fullyQualifiedTypeName name="java.time.Instant"/>
+    <fullyQualifiedTypeName name="movie.Movie"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="movie.Reservation"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>

@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+@Getter
 public class Movie {
 	
 	private long id;	//영화 고유번호
@@ -98,7 +101,31 @@ public class Movie {
 	}
 	
 	private String toFileString() {
-		return String.format("%d%s%s",id, title, genre);
+		return String.format("%d,%s,%s",id, title, genre);
+	}
+	public static Movie findAll(String movieId) {
+		Movie movie = null;
+		BufferedReader bf = null;
+		
+		try {
+			bf = new BufferedReader(new FileReader(file));
+			String line = null;
+			
+			while((line=bf.readLine())!=null) {
+				String[] temp = line.split(",");
+				if(movieId.equals(temp[0])) {
+					movie = new Movie(Long.parseLong(temp[0]), temp[1],temp[2]);
+					break;
+				}
+			}
+			bf.close();
+			return movie;
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return movie;
 	}
 
 

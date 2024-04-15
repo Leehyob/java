@@ -62,7 +62,7 @@ public class AdminMenu extends AbstractMenu {
 	private void printAllMovies() {
 		ArrayList<Movie> movies =  Movie.findAll(); //findAll 의 return값인 movies를 이 메소드 안 movies에 넣음
 		
-		System.out.println(Movie.findAll() +"\n");
+//		System.out.println(Movie.findAll() +"\n");
 		
 		for(Movie movie : movies)		//for문 돌려서 각각의 목록 생성
 			System.out.println(movie);	//for문이 돌아가면서 저장된 영화 목록 출력
